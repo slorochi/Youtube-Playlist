@@ -1,0 +1,190 @@
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@font-face {
+	font-family: "quantum";
+	src: url('font/Quantum.otf') format("opentype");
+  }
+  
+//VARIABLES
+@grey : rgb(150, 150, 147);
+@dkgrey : rgb(32, 31, 31);
+@orange:rgb(240, 97, 31);
+@blueItems: rgb(56, 59, 71);
+@yellow:rgb(189, 174, 155);
+@gblue:rgb(52, 52, 58);
+@oYellow:rgb(201, 192, 181);
+@radialBlue: radial-gradient(circle, rgba(48,51,68,1) 0%, rgba(28,28,28,1) 100%);
+
+// GENERAL STYLE
+
+body{
+	width:100vw;
+	overflow-x:hidden;
+}
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////// HEADER///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+.banderole{
+    background:rgba(37, 37, 37, 0.98);
+    height:60px;
+    width:100vw;
+    padding:0px 20px;
+    margin:0px;
+    //LEFT
+    .leftBanderole{
+        width:auto;
+        a{
+            text-decoration: none;
+            height:38px;
+            .logo{
+                height:100%;
+                width:auto;
+            }
+        }
+    }
+    //CENTER
+    .centerBanderole{
+        width:auto;
+        #url{
+            width:600px;
+            height:40px;
+            font-weight: 500;
+            font-size: 1.05em;
+            line-height:1.05em;
+            border-top-left-radius:2px;
+            border-bottom-left-radius:2px;
+            border:1px solid rgb(90, 90, 90);
+            background:rgb(27, 27, 27);
+            color:white;
+            cursor:text;
+            &:focus{
+                cursor:text;
+                border:rgb(39, 112, 248) 1px solid;
+                outline:none;
+            }
+        }
+        #searchurl{
+            width:75px;
+            height:40px;
+            font-weight: 600;
+            font-size: 1.15em;
+            line-height:1.15em;
+            color:white;
+            background:rgb(63, 63, 63);
+            position:relative;
+            right:0px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border:none;
+        } 
+    }
+    //RIGHT
+    .rightBanderole{
+        width:auto;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////// CONTENT ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+.contFluid{
+    background: linear-gradient(270deg, rgb(39, 34, 34) 0%, rgb(54, 36, 36) 100%);
+    /* background: linear-gradient(90deg, rgba(103,97,97,1) 0%, rgba(27,26,26,1) 100%); */
+    background:rgb(24, 24, 24); 
+    height:auto;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    //CONTPLAYER
+    .contPlayerVideo{
+        height:calc(100Vh - 56px);
+        width:74%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        padding:30px 30px 30px 70px;
+        iframe{
+            width:100%;
+            height:90%;
+            cursor:pointer;
+            transition: ease-in-out 0.15s;
+            border:1px solid rgba(34, 16, 16, 0.8);
+            &:hover{
+                transition: 0.15s ease-in-out;
+                z-index:200
+
+            }
+
+        }
+    }
+}
+.containerPlaylist{
+    position:relative;
+    padding: 30px 60px 30px 0px;
+    width:26%;
+    margin:0;
+    .liste{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        flex-direction:column;
+        width:auto;
+        padding:0px;
+        margin:0px;
+        .contentPlaylist{
+            height:80px;
+            border-radius:3px;
+            margin:0 0 5px 0;
+            .play{
+                height:100%;
+                width:27%;
+                border:none;
+                border-radius:3px;
+                background:rgb(82, 107, 68);
+                color:rgb(219, 215, 198);
+                cursor:pointer;
+                i{
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                }
+            }
+            .titlePlaylist{
+                height:100%;
+                width:73%;
+                overflow: hidden;
+                padding-right: 0px;
+            }
+            .delete{
+                height:30px;
+                width:30px;
+                border:none;
+                border-radius:3px;
+                background:rgb(184, 11, 11);
+                color:rgb(219, 215, 198);
+                margin-bottom: 10px;
+                cursor:pointer;
+                i{
+                    font-size:0.9em;
+                }
+            }
+            
+            .listes{
+                height: auto;
+                width:80%;
+                color:rgb(233, 229, 229);
+                font-weight:600;
+                overflow: hidden;
+                &:focus{
+                    outline:none;
+                    border:none;  
+                }
+            } 
+        }
+    }
+}
+
+
